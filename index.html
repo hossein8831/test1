@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>miralaee</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Game -->
+    <div class="game-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>بازی سوالات ریاضی</h1>
+            <p>miralaee</p>
+        </div>
+
+        <!-- Splash Page -->
+        <div class="card" id="splash-page">
+            <form id="start-form">
+                <!-- Selection -->
+                <div class="selection-container">
+                    <!-- Option-1 -->
+                    <div class="radio-container">
+                        <label for="value-10">10 سوال</label>
+                        <input type="radio" id="value-10" name="questions" value="10">
+                        <span class="best-score">
+                            <span>بهترین امتیاز</span>
+                            <span class="best-score-value"></span>
+                        </span>
+                    </div>
+
+                    <!-- Option-2 -->
+                    <div class="radio-container">
+                        <label for="value-25">25 سوال</label>
+                        <input type="radio" id="value-25" name="questions" value="25">
+                        <span class="best-score">
+                            <span>بهترین امتیاز</span>
+                            <span class="best-score-value"></span>
+                        </span>
+                    </div>
+                    <!-- Option-3 -->
+                    <div class="radio-container">
+                        <label for="value-50">50 سوال</label>
+                        <input type="radio" id="value-50" name="questions" value="50">
+                        <span class="best-score">
+                            <span>بهترین امتیاز</span>
+                            <span class="best-score-value"></span>
+                        </span>
+                    </div>
+                    <!-- Option-4 -->
+                    <div class="radio-container">
+                        <label for="value-99">99 سوال</label>
+                        <input type="radio" id="value-99" name="questions" value="99">
+                        <span class="best-score">
+                            <span>بهترین امتیاز</span>
+                            <span class="best-score-value"></span>
+                        </span>
+                    </div>
+                </div>
+                <!-- Submit/Start Button -->
+                <div class="selection-footer">
+                    <button class="start" type="submit">شروع بازی</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Countdown -->
+        <div class="card" id="countdown-page" hidden>
+            <h1 class="countdown"></h1>
+        </div>
+
+        <!-- Game Page -->
+        <div class="card" id="game-page" hidden>
+            <!-- Game Item -->
+            <div class="item-container">
+                <!-- <div class="selected-item"></div> -->
+                <!-- <div class="item">
+                    <h1>3 x 3 = 30</h1>
+                </div> -->
+            </div>
+
+            <!-- Select Button -->
+            <div class="item-footer">
+                <button class="wrong" onclick="select(false)">غلطه</button>
+                <button class="right" onclick="select(true)">درسته</button>
+            </div>
+        </div>
+
+        <!-- Score Page -->
+        <div class="card" id="score-page" hidden>
+             <div class="score-container">
+                <h1 class="title">زمان شما</h1>
+                <h1 class="final-time">3.4s</h1>
+                <h1 class="base-time">بهترین زمان: 2.4s</h1>
+                <h1 class="penalty-time">زمان حساس: 1.5s(0.5 for each)</h1>
+             </div>
+             <!-- Play Again -->
+             <div class="score-footer">
+                <button class="play-again" onclick="playAgain()" hidden>بازی دوباره</button>
+             </div>
+        </div>
+
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
